@@ -68,7 +68,9 @@ export function useAuth() {
    * El backend redirige a ServiceNow y maneja el callback.
    */
   const initiateOAuth = () => {
-    const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8080';
+    const apiUrl =
+      process.env.NEXT_PUBLIC_API_URL ||
+      'https://enterprise-agent-backend-prd-ecg8gsgghdd6ebfr.centralus-01.azurewebsites.net';
     window.location.href = `${apiUrl}/oauth/authorize`;
   };
 

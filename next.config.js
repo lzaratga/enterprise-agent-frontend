@@ -11,12 +11,16 @@ const nextConfig = {
 
   // Variables de entorno públicas
   env: {
-    NEXT_PUBLIC_API_URL: process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8080',
+    NEXT_PUBLIC_API_URL:
+      process.env.NEXT_PUBLIC_API_URL ||
+      'https://enterprise-agent-backend-prd-ecg8gsgghdd6ebfr.centralus-01.azurewebsites.net',
   },
 
   // Proxy backend API to avoid CORS & cookie issues
   async rewrites() {
-    const backendUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8080';
+    const backendUrl =
+      process.env.NEXT_PUBLIC_API_URL ||
+      'https://enterprise-agent-backend-prd-ecg8gsgghdd6ebfr.centralus-01.azurewebsites.net';
 
     return [
       {
